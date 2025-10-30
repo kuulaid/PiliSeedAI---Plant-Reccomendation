@@ -1,0 +1,17 @@
+1. Retrieves data from Trefle
+- filters PH plants
+- extract scientific and common name + growth conditions
+
+https://trefle.io/api/v1/plants?filter[distribution]=philippines&token=
+https://trefle.io/api/v1/plants/cocos-nucifera?token=
+
+
+2. Filter plants by the environmental factors from the ESP32
+- Narrows down the options
+
+3. Ranking of the filtered plants. May suitability score kada growth factor (0.0 - 1.0)
+then confidence is calculated 
+
+confidence = (temp_score + moisture_score + humidity_score + light_score) / 4
+
+4. Gemini
